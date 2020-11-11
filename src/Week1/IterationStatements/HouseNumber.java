@@ -9,21 +9,28 @@ public class HouseNumber {
         Scanner sc = new Scanner(System.in);
         int t = sc.nextInt();
         while(t-->0){
-            int N = sc.nextInt();
-            int noOfDigits = 0;
-            while(N>0){
-                boolean quotientIsNotZero = true;
-                while (quotientIsNotZero){
-                    noOfDigits = noOfDigits + 1;
-                    N = N/10;
-                    if(N==0){
-                        quotientIsNotZero = false;
-                    }
+            int N = sc.nextInt(); // input
+            int currentNumberUnderCheck = N;
+            long totalDigits = 0L;
+
+            while(currentNumberUnderCheck>0){
+                N = currentNumberUnderCheck;
+                while (N != 0) {
+                    // checking total digits in currentNumberUnderCheck
+                    N = N / 10;
+                    totalDigits++;
                 }
-            N--;
+//                System.out.println("Total digits up to "+currentNumberUnderCheck+" (decreasing) is "+totalDigits);
+                currentNumberUnderCheck--;
             }
+            System.out.println(totalDigits);
         }
-
-
     }
 }
+
+
+
+
+
+
+
