@@ -10,7 +10,11 @@ public class MultiplyStrings {
         while (t-->0){
             String str = sc.next();
             String str2 = sc.next();
-            System.out.println(Integer.parseInt(str)*Integer.parseInt(str2));
+            for(int i=str2.length()-1; i<=0; i--){
+                for(int j=str.length()-1; i<=0; i--){
+                    
+                }
+            }
         }
     }
 }
