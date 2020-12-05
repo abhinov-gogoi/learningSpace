@@ -5,11 +5,12 @@ import java.util.Scanner;
 
 public class Pattern {
 
-    public static int printPattern(int number){
-        if(number>0)
-            return number + printPattern(number-1);
-        else
-            return number;
+    public static void printPattern(int number){
+        System.out.print(number+" ");
+        if(number<=0)
+            return;
+        printPattern(number-5);
+        System.out.print(number+" ");
     }
 
     public static void main(String[] args) throws IOException {
@@ -17,8 +18,8 @@ public class Pattern {
         int t = sc.nextInt();
         while(t-->0){
             int number = sc.nextInt();
-            int sum = printPattern(number);
-            System.out.println(sum);
+            printPattern(number);
+            System.out.println("");
         }
     }
 }
