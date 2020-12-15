@@ -7,6 +7,7 @@ public class BinarySearchRecursive {
             return false;
 
         int mid = left + ((right-left)/2);
+
         if (array[mid] == x)
             return true;
         else if (x<array[mid])
