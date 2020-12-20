@@ -1,7 +1,7 @@
 package com.geeksforgeeks.OOPConcepts.inheritance;
 // https://www.geeksforgeeks.org/accessing-grandparents-member-in-java-using-super/
 
-// In Java, a class cannot directly access the grandparent’s members.
+// In Java, a class cannot directly access the grandparent’s members. (in Multilevel Inheritance)
 class Grandparent {
     public void Print() {
         System.out.println("Grandparent's Print()");
