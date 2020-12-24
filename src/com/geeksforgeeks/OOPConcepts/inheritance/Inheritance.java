@@ -63,3 +63,11 @@ public class Inheritance {
         System.out.println(result);
     }
 }
+
+/*
+A subclass inherits all the members (fields, methods, and nested classes)
+from its superclass. Constructors are not members,
+so they are not inherited by subclasses,
+but the constructor of the superclass can be invoked from the subclass.
+ */
+
