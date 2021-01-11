@@ -1,6 +1,6 @@
-package com.prepbytes.datastructures.linkedlist;
+package com.prepbytes.week7.linkedlist.singlylinkedlist;
 
-public class Node {
+class Node {
     int data;
     Node next;
 
@@ -11,7 +11,7 @@ public class Node {
     }
 }
 
-class LinkedList {
+public class LinkedList {
     Node head = null;
 
     public void insertAtBeginning(int data){

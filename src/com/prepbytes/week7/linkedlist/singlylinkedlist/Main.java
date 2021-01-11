@@ -1,4 +1,4 @@
-package com.prepbytes.datastructures.linkedlist;
+package com.prepbytes.week7.linkedlist.singlylinkedlist;
 
 public class Main {
     public static void main(String[] args){
