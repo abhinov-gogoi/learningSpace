@@ -1,9 +1,28 @@
-package com.myalgorithms.sorting;
+package com.prepbytes.week6;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
-public class Quicksort {
-    static int partition(int arr[], int low, int high) {
+public class SortTheNumbers {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int t=sc.nextInt();
+        while(t-->0){
+            int N = sc.nextInt();
+            int[] arr = new int[N];
+            for (int i=0; i< arr.length; i++){
+                arr[i] = sc.nextInt();
+            }
+
+            quicksort(arr, 0, arr.length-1);
+            for (int i=0; i<arr.length; i++){
+                System.out.print(arr[i]+" ");
+            }
+            System.out.println();
+        }
+    }
+
+    static int partition(int[] arr, int low, int high) {
         int pivot = arr[high];
         int i = (low - 1); // index of smaller element
         for (int j = low; j < high; j++) {
@@ -26,7 +45,7 @@ public class Quicksort {
         return i + 1;
     }
 
-     public static void quicksort(int[] arr, int low, int high) {
+    public static void quicksort(int[] arr, int low, int high) {
         if (low < high) {
             /* pi is partitioning index, arr[pi] is
               now at right place */
@@ -37,11 +56,5 @@ public class Quicksort {
             quicksort(arr, low, pi - 1);
             quicksort(arr, pi + 1, high);
         }
-    }
-
-    public static void main(String[] args){
-        int[] arr = {4,1,6,2,7,3,8,9,0,5};
-        quicksort(arr, 0, arr.length-1);
-        System.out.println(Arrays.toString(arr));
     }
 }

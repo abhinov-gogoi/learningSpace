@@ -11,7 +11,7 @@ public class BubbleSortPractice1 {
 
     }
 
-    public static void bubbleSort(int [] array){
+    static void bubbleSort(int[] array){
         boolean isSorted = false;
         while(!isSorted){
             isSorted = true;
