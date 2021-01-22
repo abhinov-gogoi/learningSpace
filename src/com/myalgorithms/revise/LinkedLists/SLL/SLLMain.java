@@ -1,8 +1,8 @@
 package com.myalgorithms.revise.LinkedLists.SLL;
 
-public class Main {
+public class SLLMain {
     public static void main(String[] args) {
-        var list = new LinkedList();
+        var list = new SInglyLinkedList();
 
         list.insertAtBeg(3);
         list.insertAtBeg(4);

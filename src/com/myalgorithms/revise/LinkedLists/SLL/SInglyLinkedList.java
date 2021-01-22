@@ -1,6 +1,6 @@
 package com.myalgorithms.revise.LinkedLists.SLL;
 
-public class LinkedList {
+public class SInglyLinkedList {
     SLLNode head;
 
     public void insertAtBeg(int data) {
@@ -43,6 +43,10 @@ public class LinkedList {
             newNode.next = null;
             temp.next = newNode;
         }
+    }
+
+    public void delete(int data) {
+
     }
 
     public void print() {

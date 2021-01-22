@@ -6,7 +6,5 @@ public class Node {
     Node right;
     Node (int item){
         this.data = item;
-        left = null;
-        right = null;
     }
 }

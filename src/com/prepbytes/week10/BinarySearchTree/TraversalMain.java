@@ -1,8 +1,8 @@
 package com.prepbytes.week10.BinarySearchTree;
 
-public class Main {
+public class TraversalMain {
     public static void main(String[] args) {
-        var tree = new TreeTraversal();
+        var tree = new BinarySearchTree();
 
         tree.root = new Node(1);
 
