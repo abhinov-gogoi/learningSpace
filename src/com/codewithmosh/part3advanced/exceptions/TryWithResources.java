@@ -1,10 +1,8 @@
-package com.brocode.customexceptions.mosh;
+package com.codewithmosh.part3advanced.exceptions;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 
 public class TryWithResources {
     public static void main(String[] args) throws FileNotFoundException {

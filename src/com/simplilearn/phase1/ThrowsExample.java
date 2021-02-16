@@ -1,4 +1,4 @@
-package phase1;
+package com.simplilearn.phase1;
 
 public class ThrowsExample {
     public static void main(String[] args) {

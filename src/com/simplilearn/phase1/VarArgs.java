@@ -1,4 +1,4 @@
-package phase1;
+package com.simplilearn.phase1;
 
 // A method that takes variable number of integer arguments.
 public class VarArgs {

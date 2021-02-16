@@ -1,4 +1,4 @@
-package com.brocode.customexceptions.mosh;
+package com.codewithmosh.part3advanced.exceptions;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;

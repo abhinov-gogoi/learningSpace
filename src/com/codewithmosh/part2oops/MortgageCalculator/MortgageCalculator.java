@@ -1,4 +1,4 @@
-package com.codewithmosh.MortgageCalculator;
+package com.codewithmosh.part2oops.MortgageCalculator;
 
 public class MortgageCalculator {
     private final static byte MONTHS_IN_YEAR = 12;

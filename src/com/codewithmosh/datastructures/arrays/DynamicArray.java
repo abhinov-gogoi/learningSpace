@@ -1,4 +1,4 @@
-package com.mosh.datastructures.arrays;
+package com.codewithmosh.datastructures.arrays;
 
 public class DynamicArray {
     private int[] array;

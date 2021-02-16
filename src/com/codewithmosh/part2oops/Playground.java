@@ -1,4 +1,4 @@
-package com.codewithmosh;
+package com.codewithmosh.part2oops;
 
 public class Playground {
     public static void main(String[] args) {

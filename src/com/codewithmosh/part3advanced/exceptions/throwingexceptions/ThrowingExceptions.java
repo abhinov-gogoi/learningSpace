@@ -1,4 +1,4 @@
-package com.brocode.customexceptions.mosh.throwingexceptions;
+package com.codewithmosh.part3advanced.exceptions.throwingexceptions;
 
 public class ThrowingExceptions {
     public static void main(String[] args) {

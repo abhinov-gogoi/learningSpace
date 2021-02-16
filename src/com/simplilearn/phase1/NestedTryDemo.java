@@ -1,4 +1,4 @@
-package phase1;
+package com.simplilearn.phase1;
 
 public class NestedTryDemo {
     public static void main(String[] args) {

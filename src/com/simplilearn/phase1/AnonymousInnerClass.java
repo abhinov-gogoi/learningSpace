@@ -1,4 +1,4 @@
-package phase1;
+package com.simplilearn.phase1;
 // https://www.geeksforgeeks.org/anonymous-inner-class-java/
 // used in threading
 

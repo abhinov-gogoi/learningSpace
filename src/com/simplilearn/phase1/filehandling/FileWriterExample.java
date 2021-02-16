@@ -1,4 +1,4 @@
-package phase1.filehandling;
+package com.simplilearn.phase1.filehandling;
 
 import java.io.FileWriter;
 import java.io.IOException;

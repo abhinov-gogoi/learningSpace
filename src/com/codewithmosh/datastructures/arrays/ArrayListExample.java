@@ -1,4 +1,4 @@
-package com.mosh.datastructures.arrays;
+package com.codewithmosh.datastructures.arrays;
 
 import java.util.ArrayList;
 
