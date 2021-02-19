@@ -22,10 +22,8 @@ class Result {
      */
 
     public static String findDay(int month, int day, int year) {
-
-        // COMPLETE THIS
-
-        return "HELLO";
+        LocalDate localDate = LocalDate.of(year, month, day);
+        return localDate.getDayOfWeek().name();
     }
 
 }
