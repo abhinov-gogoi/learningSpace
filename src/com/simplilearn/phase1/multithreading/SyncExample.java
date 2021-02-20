@@ -2,16 +2,20 @@ package com.simplilearn.phase1.multithreading;
 
 class Table{
 
-    void printTable(int n){
-        synchronized(this){//synchronized block
-            for(int i=1;i<=5;i++){
-                System.out.println(n*i);
+    void printTable(int n, String str){
+        // due to synchronised keyword one thread begins executing only after the other has finished
+        // otherwise we may get mixed results
+        synchronized(this){
+            for(int i=1;i<=50;i++){
                 try{
-                    Thread.sleep(400);
-                }catch(Exception e){System.out.println(e);}
+                    System.out.println(n*i+str);
+                }
+                catch(Exception e){
+                    System.out.println(e);
+                }
             }
         }
-    }//end of the method
+    }
 }
 
 class MyThread1 extends Thread{
@@ -20,7 +24,7 @@ class MyThread1 extends Thread{
         this.t=t;
     }
     public void run(){
-        t.printTable(5);
+        t.printTable(1, "  thread 111111111" );
     }
 }
 class MyThread2 extends Thread{
@@ -29,7 +33,7 @@ class MyThread2 extends Thread{
         this.t=t;
     }
     public void run(){
-        t.printTable(100);
+        t.printTable(100," thread 222222222" );
     }
 }
 
