@@ -1,4 +1,4 @@
-package com.in28minutes.hibernate.collections;
+package com.revise.collections;
 
 import java.util.ArrayList;
 import java.util.List;
