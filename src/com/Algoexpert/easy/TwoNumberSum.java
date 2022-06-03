@@ -1,4 +1,4 @@
-package com.netcat.meow.Algoexpert.easy;
+package com.Algoexpert.easy;
 
 public class TwoNumberSum {
     public static int[] twoNumberSum(int[] array, int targetSum) {
