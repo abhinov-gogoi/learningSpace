@@ -1,4 +1,4 @@
-package com.revise.collections;
+package com.revise.collections.list;
 
 import java.util.ArrayList;
 import java.util.List;

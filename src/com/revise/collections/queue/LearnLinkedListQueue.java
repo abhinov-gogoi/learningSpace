@@ -1,4 +1,4 @@
-package com.revise.collections;
+package com.revise.collections.queue;
 
 import java.util.LinkedList;
 import java.util.Queue;
