@@ -1,16 +1,20 @@
 package com.revise.collections.set;
 
-import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
-public class LearnHashSet {
+public class LearnTreeSet {
+
+    /**
+     * order is maintained
+     * Implements BST internally
+     * Time Complexity - O(LogN)
+     */
+
     public static void main(String[] args) {
-        Set<Integer> set = new HashSet<>();
-        /**
-         * random order / order is not maintained in HASHSET
-         *
-         * Time Complexity - O(1)
-         */
+        Set<Integer> set = new TreeSet<>();
+
         set.add(32);
         set.add(2);
         set.add(54);

@@ -1,16 +1,21 @@
 package com.revise.collections.set;
 
-import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.Set;
 
-public class LearnHashSet {
+public class LearnLinkedHashSet {
+
+    /**
+     * no duplicates
+     * order is maintained
+     * Implements Linked list internally
+     * Time Complexity - O(1) for basic operations
+     */
+
     public static void main(String[] args) {
-        Set<Integer> set = new HashSet<>();
-        /**
-         * random order / order is not maintained in HASHSET
-         *
-         * Time Complexity - O(1)
-         */
+
+        Set<Integer> set = new LinkedHashSet<>();
+
         set.add(32);
         set.add(2);
         set.add(54);
@@ -27,5 +32,4 @@ public class LearnHashSet {
         set.clear();
         System.out.println(set.isEmpty());
     }
-
 }

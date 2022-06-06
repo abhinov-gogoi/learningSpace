@@ -1,0 +1,15 @@
+set interface extends collection interface.
+in a set, no duplicates are allowed. every element in a set must be unique.
+we can simply add elements to a set, and finally we will get a set of elements with duplicates removed automatically.
+
+hashset vs. treeset vs. linkedhashset
+
+-hashset is implemented using a hash table. elements are not ordered. the add, remove, and contains methods has constant time complexity o(1).
+
+-treeset is implemented using a tree structure(red-black tree in algorithm book).
+ the elements in a set are sorted, but the add, remove, and contains methods has  time complexity of o(log (n)).
+ it offers several methods to deal with the ordered set like first(), last(), headset(), tailset(), etc.
+
+-linkedhashset is between hashset and treeset.
+ it is implemented as a hash table with a linked list running through it, so it provides the order of insertion.
+ the time complexity of basic methods is o(1).
