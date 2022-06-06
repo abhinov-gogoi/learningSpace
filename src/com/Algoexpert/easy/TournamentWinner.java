@@ -57,7 +57,6 @@ public class TournamentWinner {
         int maxValue = Collections.max(map.values());
         map.forEach((key, value) -> {
             if (value.equals(maxValue)) {
-                key.toString();
                 System.out.println(key);
             }
         });
