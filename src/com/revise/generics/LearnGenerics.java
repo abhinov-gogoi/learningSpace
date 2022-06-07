@@ -1,5 +1,7 @@
 package com.revise.generics;
 
+import com.revise.generics.helpers.Animal;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,6 +28,7 @@ public class LearnGenerics {
         List<Integer> integerList = new ArrayList<>();
         integerList.add(1);
         integerList.add(2);
+        wildcard(integerList);
     }
 
     public static <T> void aGenericMethod(T thingToPrint) {
@@ -40,7 +43,15 @@ public class LearnGenerics {
      * In this case we must use the WILDCARD symbol '?'
      * there can also be bounded wildcards - ex -  public static void printList(List<? extends Animal> list)
      */
-    public static void printList(List<?> list) {
+    public static void wildcard(List<?> list) {
         System.out.println();
+    }
+
+    public static void boundedWildcard(List<? extends Animal> list) {
+        System.out.println();
+    }
+
+    public static <T extends Animal, SomeInterface> T boundedWithReturnType(T something) {
+        return something;
     }
 }
