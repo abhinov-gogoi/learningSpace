@@ -6,6 +6,8 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Source - <a href="https://www.youtube.com/watch?v=bJT634zMbAM">...</a>
+ * <a href="https://www.youtube.com/watch?v=uQLAToNIlNE">...</a>
+ *
  * Concurrent collections was introduced in Java 1.5
  *
  * Traditional collection classes are NOT thread safe.
@@ -14,8 +16,9 @@ import java.util.concurrent.ConcurrentHashMap;
  * The problem is that they capture lock on complete collection (even for reading operation)
  * which decreases the performance.
  *
- * In traditional Collection if one thread is iterating a collection and other thread tries to modify the collection
- * we get 'ConcurrentModificationException'
+ * In traditional Collection, while iterating over a collection and simultaneously trying to modify the collection
+ * we get 'ConcurrentModificationException'.
+ * Thus this exception can also occur in single threaded environment, when we modify a collection during iteration - also see 'modCount'
  *
  * In such cases ConcurrentHashMap should be used
  *
