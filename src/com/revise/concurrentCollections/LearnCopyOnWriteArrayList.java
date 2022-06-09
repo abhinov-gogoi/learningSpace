@@ -11,6 +11,7 @@ package com.revise.concurrentCollections;
  * if one thread is iterating and other tries to modify (do structural change)
  * then new clone of the list will be created and later JVM synchronize the clone and actual copy
  *
+ *
  */
 public class LearnCopyOnWriteArrayList {
 }
