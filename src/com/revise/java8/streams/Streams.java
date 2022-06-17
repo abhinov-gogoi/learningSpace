@@ -1,7 +1,7 @@
 package com.revise.java8.streams;
 
-import java.util.Arrays;
-import java.util.Comparator;
+import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -90,9 +90,50 @@ public class Streams {
          * 5. Stream from an array then sort(), filter() and print()
          */
         String[] names = {"Abhinov", "Manish", "Zack", "Siv", "Pu"};
-        Arrays  .stream(names) // same as Stream.of(names)
-                .filter((x)-> x.startsWith("A"))
+        Arrays.stream(names) // same as Stream.of(names)
+                .filter((x) -> x.startsWith("A"))
                 .forEach(System.out::println);
+
+        /**
+         * 6. Average of squares of an int array
+         */
+        Arrays.stream(new int[]{1, 2, 3, 4, 5, 6})
+                .map(x -> x * x)
+                .average()
+                .ifPresent(System.out::println);
+
+        /**
+         * 7. Stream from list then map(), filter(), sort() and print()
+         */
+        List<String> list_names = Arrays.asList("Abhinov", "Manish", "Zack", "Siv", "Au");
+
+        list_names
+                .stream()
+                .map(String::toLowerCase)
+                .filter(x->x.startsWith("a"))
+                .sorted(Collections.reverseOrder())
+                .forEach(System.out::println);
+
+        /**
+         * does not work. WHY ??
+         */
+//        Stream.of(list_names)
+//                .map(x->x.toString().toLowerCase())
+//                .filter(x->x.startsWith("a"))
+//                .sorted(Collections.reverseOrder())
+//                .forEach(System.out::println);
+
+        /**
+         * 8. Stream from list then map(), filter(), sort() and collect()
+         */
+
+        List<String> result = list_names
+                .stream()
+                .map(String::toLowerCase)
+                .filter(x -> x.startsWith("a"))
+                .sorted(Collections.reverseOrder())
+                .collect(Collectors.toList());
+        System.out.println(result);
 
 
     }
