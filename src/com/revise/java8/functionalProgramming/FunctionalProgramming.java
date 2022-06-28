@@ -7,7 +7,7 @@ import java.util.stream.Stream;
 /**
  * Consumer  - a functional interface (lambda) that accepts a single input and returns nothing. ex forEach()
  * Predicate - a functional interface (lambda) that accepts a single input and returns a boolean; contains test() method
- * Supplier  - a functional interface (lambda) that accepts a single input and returns a value; contains apply() method
+ * Supplier  - a functional interface (lambda) that accepts a single input and returns a value/null; contains apply() method
  * Function  - a functional interface (lambda) that accepts nothing but returns a value; contains get() method
  */
 public class FunctionalProgramming {
