@@ -25,22 +25,22 @@ public class SpringJpaApp implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
-		/**
-		 * CREATE/UPDATE - upsert
-		 */
-		logger.info("inserting 10008 User : {}", personJpaRepository.upsert(
-				new Person("JPAAMan", "AtZ", new Date(System.currentTimeMillis()))
-		));
-
-		/**
-		 * READ
-		 */
-		logger.info("findById User : {}", personJpaRepository.findById(10001));
-		logger.info("All Users : {}", personJpaRepository.findAll());
-		/**
-		 * DELETE
-		 */
-		personJpaRepository.deleteById(10002);
+//		/**
+//		 * CREATE/UPDATE - upsert
+//		 */
+//		logger.info("inserting 10008 User : {}", personJpaRepository.upsert(
+//				new Person("JPAAMan", "AtZ", new Date(System.currentTimeMillis()))
+//		));
+//
+//		/**
+//		 * READ
+//		 */
+//		logger.info("findById User : {}", personJpaRepository.findById(10001));
+//		logger.info("All Users : {}", personJpaRepository.findAll());
+//		/**
+//		 * DELETE
+//		 */
+//		personJpaRepository.deleteById(10002);
 
 
 	}

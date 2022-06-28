@@ -6,15 +6,21 @@ import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.transaction.Transactional;
 
 @Repository
+@Transactional
 public class CourseRepository {
 
     @PersistenceContext // https://stackoverflow.com/questions/31335211/autowired-vs-persistencecontext-for-entitymanager-bean
     EntityManager em;
 
-    public Course findById(Long id){
+    public Course findById(int id){
         return em.find(Course.class, id);
+    }
+
+    public void addCourse(Course course) {
+        em.merge(course);
     }
 
 

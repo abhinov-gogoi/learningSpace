@@ -24,9 +24,11 @@ public class HibernateApp implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
+        courseRepository.addCourse(new Course("Python"));
+
         System.out.println("HibernateApp");
-        Course course = courseRepository.findById(1000L);
-        logger.info(course.toString());
+        Course course = courseRepository.findById(1);
+//        logger.info(course.toString());
 
     }
 }
