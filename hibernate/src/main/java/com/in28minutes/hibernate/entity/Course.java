@@ -11,7 +11,7 @@ public class Course {
 
     @Id
     @GeneratedValue
-    private int id;
+    private Integer id;
 
     private String name;
 
@@ -22,11 +22,11 @@ public class Course {
     public Course() {
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -40,9 +40,6 @@ public class Course {
 
     @Override
     public String toString() {
-        return "Course{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                '}';
+        return "id=" + id + ", name=" + name;
     }
 }
