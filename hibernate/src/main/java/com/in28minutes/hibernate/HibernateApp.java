@@ -10,7 +10,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.List;
-import java.util.Map;
 
 @SpringBootApplication
 public class HibernateApp implements CommandLineRunner {
@@ -28,17 +27,15 @@ public class HibernateApp implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
         courseRepository.save(new Course("Python"));
-
         courseRepository.playWithEntityManager();
         courseRepository.playWithEntityManagerFlushDetatch();
 
-        System.out.println("HibernateApp");
         Course course = courseRepository.findById(1);
         logger.info("Course -> {}",course);
-
+        /**
+         * Todo :: Map native query to hashmap / convert resource to map
+         */
         List list = courseRepository.nativeQuery();
-
-        System.out.println(list.get(0));
 
 
 
