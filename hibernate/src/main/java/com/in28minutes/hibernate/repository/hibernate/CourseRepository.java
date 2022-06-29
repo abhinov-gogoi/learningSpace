@@ -5,7 +5,11 @@ import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import javax.transaction.Transactional;
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 @Repository
 @Transactional
@@ -34,10 +38,46 @@ public class CourseRepository {
     public void playWithEntityManager() {
         Course course = new Course("100 second Java");
         em.persist(course);
-        // Due to @Transactional annotation -  Entity manager keeps track of changes within this code block
+        // Due to @Transactional annotation - changes in the entity will always be synchronised to the database
+        // Entity manager keeps track of changes within this code block
         // so this line will update the course in Database too !!
         course.setName("200 sec JAVA !!");
     }
 
 
+    public void playWithEntityManagerFlushDetatch() {
+        // flush() -> force the data to be persist in the database immediately
+        Course course = new Course("100 second Java");
+        em.persist(course);
+        em.flush();
+
+        course.setName("200 sec JAVA !!");
+        em.flush();
+
+        Course course1 = new Course("300 sec of Dart");
+        em.persist(course1);
+        em.flush();
+
+        // detach() -> un-flushed changes made to the entity will not be synchronized to the database
+        em.detach(course1);
+        course1.setName("400 sec of DART !!");
+        em.flush();
+
+        /**
+         * TODO -> Also see em.remove() and em.clear()and refresh() etc
+         */
+    }
+
+
+    /**
+     * TODO :: convert resource into map
+     * @return
+     */
+    public List nativeQuery() {
+//        Query query = em.createNativeQuery("SELECT * FROM COURSE where id= :id");
+        Query query = em.createNativeQuery("SELECT * FROM COURSE");
+//        query.setParameter("id", 1);
+        List resultList = query.getResultList();
+        return resultList;
+    }
 }
