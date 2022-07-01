@@ -46,7 +46,19 @@
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
-    </dependencies>
+		<!-- MySQL JDBC driver -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.9.0</version>
+		</dependency>
+
+	</dependencies>
 
 	<build>
 		<plugins>
