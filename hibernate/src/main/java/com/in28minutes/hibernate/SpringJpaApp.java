@@ -1,6 +1,5 @@
 package com.in28minutes.hibernate;
 
-import com.in28minutes.hibernate.entity.Person;
 import com.in28minutes.hibernate.repository.jpa.PersonJpaRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

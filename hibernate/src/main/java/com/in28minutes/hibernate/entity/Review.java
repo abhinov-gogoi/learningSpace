@@ -13,6 +13,9 @@ public class Review {
 
     private String description;
 
+    @ManyToOne
+    private Course course;
+
     public Review(String name, String rating) {
         this.rating = rating;
         this.description = name;
@@ -48,5 +51,13 @@ public class Review {
     @Override
     public String toString() {
         return "id=" + id + ", description=" + description;
+    }
+
+    public Course getCourse() {
+        return course;
+    }
+
+    public void setCourse(Course course) {
+        this.course = course;
     }
 }

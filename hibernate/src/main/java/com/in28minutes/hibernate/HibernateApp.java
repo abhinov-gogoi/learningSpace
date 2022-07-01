@@ -26,16 +26,16 @@ public class HibernateApp implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
-        courseRepository.save(new Course("Python"));
-        courseRepository.playWithEntityManager();
-        courseRepository.playWithEntityManagerFlushDetatch();
-
-        Course course = courseRepository.findById(1);
-        logger.info("Course -> {}",course);
-        /**
-         * Todo :: Map native query to hashmap / convert resource to map
-         */
-        List list = courseRepository.nativeQuery();
+//        courseRepository.save(new Course("Python"));
+//        courseRepository.playWithEntityManager();
+//        courseRepository.playWithEntityManagerFlushDetatch();
+//
+//        Course course = courseRepository.findById(1);
+//        logger.info("Course -> {}",course);
+//        /**
+//         * Todo :: Map native query to hashmap / convert resource to map
+//         */
+//        List list = courseRepository.nativeQuery();
 
 
 
