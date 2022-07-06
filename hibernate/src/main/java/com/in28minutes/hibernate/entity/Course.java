@@ -31,6 +31,18 @@ public class Course {
     @OneToMany(mappedBy = "course", fetch = FetchType.EAGER)
     private List<Review> reviews = new ArrayList<Review>();
 
+    /**
+     * in manyToMany relationship, 2 JOIN TABLES  are created (STUDENT_COURSES and COURSES_STUDENT) for maintaining this relationship
+     * mappedBy can be used to fix this and only one JOIN TABLE will be created
+     *
+     * mapped by can be used on either side as this is ManyToMany relationship
+     * here I have used mapped by on COURSES to indicate that STUDENT is owning side of this manyToMany relationship
+     * -> ie, id for course is present on STUDENT_COURSES table,
+     * (this auto generated table name and column names can be changed on the owning side ie on the Student side with @JoinTable annotation)
+     */
+    @ManyToMany(mappedBy = "courses")
+    private List<Student> students = new ArrayList<Student>();
+
     public Course(String name) {
         this.name = name;
     }
@@ -85,5 +97,13 @@ public class Course {
 
     public void setCreatedDate(LocalDate createdDate) {
         this.createdDate = createdDate;
+    }
+
+    public List<Student> getStudents() {
+        return students;
+    }
+
+    public void addStudent(Student student) {
+        this.students.add(student);
     }
 }

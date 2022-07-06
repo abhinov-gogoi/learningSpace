@@ -13,6 +13,9 @@ public class Review {
 
     private String description;
 
+    /**
+     * On manyToOne relation by default its EAGER fetching strategy
+     */
     @ManyToOne
     private Course course;
 

@@ -32,6 +32,18 @@ INSERT INTO review (id, rating, description, course_id) values (10005, '3', 'Awe
 INSERT INTO review (id, rating, description, course_id) values (10006, '5', 'Wow course', 10004);
 INSERT INTO review (id, rating, description, course_id) values (10007, '5', 'Great. Thanks', 10004);
 
+INSERT INTO student_course (student_id, course_id) values (10001, 10001);
+INSERT INTO student_course (student_id, course_id) values (10001, 10002);
+INSERT INTO student_course (student_id, course_id) values (10001, 10004);
+INSERT INTO student_course (student_id, course_id) values (10002, 10002);
+INSERT INTO student_course (student_id, course_id) values (10002, 10003);
+INSERT INTO student_course (student_id, course_id) values (10002, 10004);
+INSERT INTO student_course (student_id, course_id) values (10003, 10002);
+INSERT INTO student_course (student_id, course_id) values (10003, 10004);
+INSERT INTO student_course (student_id, course_id) values (10004, 10001);
+INSERT INTO student_course (student_id, course_id) values (10004, 10002);
+INSERT INTO student_course (student_id, course_id) values (10004, 10004);
+
 
 
 
