@@ -1,5 +1,7 @@
 package com.in28minutes.hibernate.entity;
 
+import org.hibernate.annotations.Fetch;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -22,7 +24,11 @@ public class Course {
     @Column(name = "last_updated_date")
     private LocalDate lastUpdatedDate;
 
-    @OneToMany(mappedBy = "course")
+    /**
+     * By default on oneToMany relationships -> fetching is LAZY. ie all Reviews are not fetched while fetching a course.
+     * can be solved by @Transactional on calling block or by forced EAGER loading
+     */
+    @OneToMany(mappedBy = "course", fetch = FetchType.EAGER)
     private List<Review> reviews = new ArrayList<Review>();
 
     public Course(String name) {

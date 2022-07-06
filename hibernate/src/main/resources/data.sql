@@ -28,6 +28,9 @@ INSERT INTO review (id, rating, description, course_id) values (10001, '1', 'Bad
 INSERT INTO review (id, rating, description, course_id) values (10002, '2', 'Average course', 10002);
 INSERT INTO review (id, rating, description, course_id) values (10003, '3', 'Good course', 10003);
 INSERT INTO review (id, rating, description, course_id) values (10004, '4', 'Great course', 10004);
+INSERT INTO review (id, rating, description, course_id) values (10005, '3', 'Awesom course', 10004);
+INSERT INTO review (id, rating, description, course_id) values (10006, '5', 'Wow course', 10004);
+INSERT INTO review (id, rating, description, course_id) values (10007, '5', 'Great. Thanks', 10004);
 
 
 

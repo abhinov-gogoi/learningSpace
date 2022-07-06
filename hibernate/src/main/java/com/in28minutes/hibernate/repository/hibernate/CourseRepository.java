@@ -1,6 +1,9 @@
 package com.in28minutes.hibernate.repository.hibernate;
 
 import com.in28minutes.hibernate.entity.Course;
+import com.in28minutes.hibernate.entity.Review;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -10,10 +13,13 @@ import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @Repository
 @Transactional
 public class CourseRepository {
+
+    Logger logger = LoggerFactory.getLogger(CourseRepository.class);
 
     @PersistenceContext // https://stackoverflow.com/questions/31335211/autowired-vs-persistencecontext-for-entitymanager-bean
     EntityManager em;
@@ -44,7 +50,6 @@ public class CourseRepository {
         course.setName("200 sec JAVA !!");
     }
 
-
     public void playWithEntityManagerFlushDetatch() {
         // flush() -> force the data to be persist in the database immediately
         Course course = new Course("100 second Java");
@@ -71,6 +76,7 @@ public class CourseRepository {
 
     /**
      * TODO :: convert resource into map
+     *
      * @return
      */
     public List nativeQuery() {
@@ -79,5 +85,17 @@ public class CourseRepository {
 //        query.setParameter("id", 1);
         List resultList = query.getResultList();
         return resultList;
+    }
+
+    public void addReviewsForCourse(int course_id, Review... reviews) {
+        Course course = findById(course_id);
+        Stream.of(reviews).forEach(r -> {
+            r.setCourse(course);
+            em.persist(r); // we have not changed anything in the course, so no need to persist course, instead persist the reviews
+        });
+        logger.info("Reviews for the course_id " + course.getId() + " are -> {}", course.getReviews());
+
+
+
     }
 }

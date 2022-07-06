@@ -35,6 +35,12 @@ public class JDBC {
         }
     }
 
+    /**
+     * Convert a ResultSet to List of Map of String, Object
+     * @param rs
+     * @return
+     * @throws SQLException
+     */
     public static List<Map<String, Object>> resultSetToArrayList(ResultSet rs) throws SQLException{
         ResultSetMetaData md = rs.getMetaData();
         int columns = md.getColumnCount();

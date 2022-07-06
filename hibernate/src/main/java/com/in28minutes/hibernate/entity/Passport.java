@@ -22,8 +22,11 @@ public class Passport {
 
      * i.e : Student table has passport_id column
      *
-     * Note that even passport could have student_id column due to one-to-one mapping ; if we don't use the mappedBy here like (@OneToOne(fetch = FetchType.EAGER))
+     * Note that even passport could have student_id column due to one-to-one mapping ; if we don't use the mappedBy here
      * but this is duplicating data on db which is considered a bad practice
+     *
+     * NOTE Default fetch tupes are confusing refer article -
+     * https://stackoverflow.com/questions/26601032/default-fetch-type-for-one-to-one-many-to-one-and-one-to-many-in-hibernate
      */
     @OneToOne(fetch = FetchType.EAGER, mappedBy = "passport")
     private Student student;
