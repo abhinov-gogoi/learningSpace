@@ -25,7 +25,7 @@ public class CourseSpringDataRepositoryTest {
     @Test
     public void findById() {
         Optional<Course> courseOptional = courseSpringDataRepository.findById(10001);
-        logger.info("{}", courseOptional.isPresent());
+        logger.info("Id is present :::::::::::::::::::::: {}", courseOptional.isPresent());
     }
 
 }
