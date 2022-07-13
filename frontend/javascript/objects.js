@@ -1,5 +1,7 @@
 var myObject = {
+    _id : 001,
     _name: "Abhi",
+    _age : 25,
 
     get name() {
         return this._name;
@@ -10,7 +12,12 @@ var myObject = {
     },
 };
 
-console.log(myObject.name)
+
+// iterating each property in an object
+for(item in myObject) {
+    console.log(item)
+}
+
 // enumerable means access/iterable using a foreach loop
 console.log(myObject.propertyIsEnumerable("name"))
 
