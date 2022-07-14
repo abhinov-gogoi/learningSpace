@@ -8,9 +8,9 @@ Object.defineProperty(myObject, "age", { value: 25 });
 
 Object.defineProperty(myObject, "name", {
   value: "Abhi",
-  enumerable: true,
-  configurable: true,
-  writable: true,
+  enumerable: true, // If true, the property will be iterated over a foreach loop
+  configurable: true, // If false, any attempts to delete the property 'name' or change its attributes (Writable, Configurable, or Enumerable) will fail.
+  writable: true, // If false, the 'value' of the property can not be changed
 });
 
 // when we define properties this way, by default enumerable, configurable and writable will be false
