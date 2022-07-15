@@ -12,8 +12,7 @@ git add .
 git commit -m "adding a new file for today"
 
 git push origin main
-abhi
-1234
+
 
 
 
