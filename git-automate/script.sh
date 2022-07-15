@@ -16,6 +16,7 @@ git push origin automate
 
 git config --global credential.helper 'cache --timeout 90000000'
 
+timeout 10s echo "running script again ... in 10s"
 sh script.sh
 
 
