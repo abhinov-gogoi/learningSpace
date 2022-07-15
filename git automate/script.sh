@@ -11,7 +11,7 @@ echo file created ... file-$MAX.txt
 git add .
 git commit -m "adding a new file for today"
 
-git push origin main
+git push origin automate
 
 
 
