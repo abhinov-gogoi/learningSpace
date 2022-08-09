@@ -9,14 +9,18 @@ public class SumOfDigits {
     }
 
     public static long calculateSum(long n) {
+        // unintentional case - the constraint
         if(n<0) {
             return -1;
-        } else if(n==0) {
+        }
+        if(n==0) {
             return 0;
-        } else if (n == 1) {
+        }
+        // base case - the stopping criterion
+        if (n == 1) {
             return 1;
         }
-
+        // recursive case - the flow
         return n%10 + calculateSum(n/10);
     }
 }

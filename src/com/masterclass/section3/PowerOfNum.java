@@ -15,11 +15,15 @@ public class PowerOfNum {
     }
 
     public static long power(long base, long exponent) {
+        // unintentional case - the constraint
         if (exponent<0) {
             return -1;
-        } else if (exponent == 0) {
+        }
+        // base case - the stopping criterion
+        if (exponent == 0) {
             return 1;
         }
+        // recursive case - the flow
         return base * power(base, exponent-1);
     }
 }
